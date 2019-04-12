@@ -10,9 +10,12 @@ header {
 }
 nav{
     position: relative;
-    width: 30vw;
-    top: 4vh;
-    left: 15vw;
+    width: 20vw;
+    top: 6vh;
+    float: left;
+    margin-left: 15vw;
+    z-index: 2;
+    font-size: 3%
 }
 .Dropdown{
     display: inline-block;
@@ -22,7 +25,7 @@ nav{
     display: none;
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 .Dropdown:hover .Dropdown-content{
     display: block;
@@ -37,17 +40,24 @@ li{
     border-right: 2px solid black;
 }
 a{
-    font-size: 4ex;
+    font-size: 5ex;
     text-decoration: none;
     color: hsl(0, 100%, 100%);
 }
 /* Shl loggan som ligger i headern får sina mått och placeras i mitten av bredden. */
 #Shl{
-    position: absolute;
+    position: relative;
     width: 12vh;
     height: 12vh;
-    top: 30px;
-    left: 50%
+    float: left;
+    top: 1.5vh;
+    margin-left: 11vw;
+}
+.form1{
+    position:relative;
+    top: 2vh;
+    float: right;
+    margin-right: 2vw;
 }
 aside.left { 
     background-color: hsl(194, 35%, 68%);
@@ -72,7 +82,17 @@ main {
     height: 70vh;
     background-repeat: repeat;
 }
-
+article{
+    position: relative;
+    float: left;
+    margin: 8.3vh 0 0 2.5vw;
+    background-color: white;
+    height: 22.5vh;
+    width: 20vw;
+}
+article>img{
+    
+}
 footer{
     background-color: hsl(317, 0%, 35%);
     width: 100vw;
