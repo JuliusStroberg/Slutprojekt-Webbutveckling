@@ -15,7 +15,7 @@ nav{
     float: left;
     margin-left: 15vw;
     z-index: 2;
-    font-size: 3%
+    font-size: 4%
 }
 .Dropdown{
     display: inline-block;
@@ -38,20 +38,37 @@ li{
     display: inline-block;
     padding: 10px;
     border-right: 2px solid black;
+    
 }
 a{
-    font-size: 5ex;
+    font-size: 6ex;
     text-decoration: none;
     color: hsl(0, 100%, 100%);
 }
+li:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+    transition-duration: 1s;
+}
 /* Shl loggan som ligger i headern får sina mått och placeras i mitten av bredden. */
 #Shl{
-    position: relative;
+    position: absolute;
     width: 12vh;
     height: 12vh;
-    float: left;
-    top: 1.5vh;
-    margin-left: 11vw;
+    left: 46.5%;
+    top: 1.7%;
+    animation-name: startanimation;
+    animation-duration: 3s;
+}
+@keyframes startanimation {
+    from {
+        left: 0;
+        transform: rotate(20deg);
+    }
+    to{
+        left: 46.5%;
+        transform: rotate(0deg);
+        animation-play-state: paused;
+    }
 }
 .form1{
     position:relative;
@@ -65,11 +82,62 @@ aside.left {
     height: 70vh;
     float: left;
 }
+.puck{
+    position: absolute;
+    left: 3vw;
+    top: 60vh;
+    margin: 0; /*Gör så att marginen satt från aside>img inte räknas med på den här bilden*/
+    z-index: 1;
+    width: 5%;
+    height: 10%;
+    animation-name: puck;
+    animation-duration: 4 s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes puck{
+    from{
+        top: 60vh;
+    }
+    to{
+        top: 15vh;
+    }
+}
+.klubba{
+    position: absolute;
+    z-index: 2;
+    margin: 0; /*Gör så att marginen satt från aside>img inte räknas med på den här bilden*/
+    height: 30%;
+    width: 10%;
+    left: 4vw;
+    top: 40vh;
+    animation-name: klubba;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; 
+}
+@keyframes klubba{
+    0%{
+
+    }
+    50%{
+        transform: rotate3d(10, 0, 0, 45deg);
+    }
+    100%{
+
+    }
+}
 aside.right { 
     background-color: hsl(194, 35%, 68%);
     width: 15vw;
     height: 70vh;
     float: right;
+}
+aside>img{
+    width: 60%;
+    height: 45%; 
+    margin: 6.5% 0 0 20%;
 }
 /* Huvudinnehållet får en bakgrundsbild som placeras i mitten och täcker 70% av bredden. Den sätts på repeat för att täcka hela ytan. */
 main {
@@ -85,13 +153,21 @@ main {
 article{
     position: relative;
     float: left;
-    margin: 8.3vh 0 0 2.5vw;
+    margin: 7vh 0 0 2.5vw;
     background-color: white;
-    height: 22.5vh;
+    height: 24.5vh;
     width: 20vw;
+    border: 2px solid black;
 }
 article>img{
-    
+    float: left;
+    width: 35%;
+    height: 40%;
+    margin: 4% 4% 0% 4%;;
+    border: 2px solid black;
+}
+article>p{
+    margin-left: 2%;
 }
 footer{
     background-color: hsl(317, 0%, 35%);
