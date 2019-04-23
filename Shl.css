@@ -17,6 +17,11 @@ nav{
     z-index: 2;
     font-size: 4%
 }
+@media screen and (max-width: 826px) {
+    nav {
+      margin-left: 0;
+    }
+  }
 .Dropdown{
     display: inline-block;
     position: relative;
@@ -40,8 +45,8 @@ li{
     border-right: 2px solid black;
     
 }
-a{
-    font-size: 6ex;
+nav a{
+    font-size: 6%;
     text-decoration: none;
     color: hsl(0, 100%, 100%);
 }
@@ -70,9 +75,9 @@ li:hover{
         animation-play-state: paused;
     }
 }
-.form1{
-    position:relative;
-    top: 2vh;
+.form1, .form2{
+    position: relative;
+    top: 10vh;
     float: right;
     margin-right: 2vw;
 }
@@ -91,7 +96,7 @@ aside.left {
     width: 5%;
     height: 10%;
     animation-name: puck;
-    animation-duration: 4 s;
+    animation-duration: 4s;
     animation-delay: 1s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
@@ -168,9 +173,25 @@ article>img{
 }
 article>p{
     margin-left: 2%;
+    font-size: 0.8vw;
+    max-height: 100%;
 }
 footer{
     background-color: hsl(317, 0%, 35%);
     width: 100vw;
     height: 15vh;
+}
+dl{
+    margin: 0;
+    max-height: 5vh;
+}
+dt{
+    padding-left: 10vw;
+}
+dd{
+    display: inline-block;
+    padding: 1vh 0,5vw;
+}
+dt + dd{
+    margin-left: 12vw;
 }
