@@ -201,6 +201,34 @@ dl~img{
         height: 20vw;
     }
 }
+section{
+    overflow-x: auto; /*Blir tabellen för stor för att få plats på sidan kan man skrolla horisontellt för att kuna se allt*/
+}
+table, th, td{
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    padding: 1rem 4rem;
+}
+table{
+    margin: auto;
+    margin-top: 3rem;
+}
+th{
+    background-color: #b1b1b1;
+}
+tr:nth-child(even){
+    background-color: #b1b1b1;
+}
+caption{
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: left;
+}
+.textimg{
+    vertical-align: baseline;
+    height: 2em;
+    width: 2em;
+}
 footer{
     clear: both;
     position: relative;
