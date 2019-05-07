@@ -71,7 +71,7 @@ aside.left {
     position: relative;
     background-color: hsl(194, 35%, 68%);
     width: 15%;
-    min-height: 100vh;
+    min-height: 84.3rem;
     float: left;
 }
 .puck{
@@ -81,7 +81,7 @@ aside.left {
     margin: 0; /*Gör så att marginen satt från aside>img inte räknas med på den här bilden*/
     z-index: 1;
     width: 20%;
-    height: 12%;
+    height: 7%;
     animation-name: puck;
     animation-duration: 4s;
     animation-delay: 1s;
@@ -100,10 +100,10 @@ aside.left {
     position: absolute;
     z-index: 2;
     margin: 0; /*Gör så att marginen satt från aside>img inte räknas med på den här bilden*/
-    height: 40%;
+    height: 30%;
     width: 50%;
     left: 4vw;
-    top: 20%;
+    top: 25%;
     animation-name: klubba;
     animation-duration: 4s;
     animation-timing-function: ease-in-out;
@@ -124,7 +124,7 @@ aside.right {
     position: relative;
     background-color: hsl(194, 35%, 68%);
     width: 15%;
-    height: 100vh;
+    height: 84.3rem;
     float: left;
 }
 aside>img{
@@ -141,8 +141,9 @@ main {
     float: left;
     background-color: hsl(317, 0%, 80%);
     width: 70%;
-    min-height: 100vh;
+    height: 84.3rem;
     background-repeat: repeat;
+    overflow-x: auto;
 }
 article{
     position: relative;
@@ -150,7 +151,7 @@ article{
     float: left;
     margin: 5% 0 0 2.5vw;
     background-color: white;
-    height: 35%;
+    height: 16rem;
     width: 20vw;
     border: 1px solid rgba(0, 0, 0, 0.534);
     overflow: hidden;
@@ -175,8 +176,8 @@ article:hover{
 /*En klass för artiklarna som ligger på Lagsidan*/
 .Lag{  
     background-color: rgba(255, 255, 255, 0.849);
-    width: 15vw;
-    height: 33rem;
+    width: 15rem;
+    height: 30rem;
     margin: 4rem 4rem;
     margin-right: 0;
     z-index: 3;
@@ -184,7 +185,7 @@ article:hover{
 /*Klass för lagbilder*/
 .Lagbild{
     width: 100%;
-    height: 15vw;
+    height: 10rem;
     margin: 0;
     border-bottom: 20px solid black;
 }
@@ -204,10 +205,20 @@ dl~img{
 section{
     overflow-x: auto; /*Blir tabellen för stor för att få plats på sidan kan man skrolla horisontellt för att kuna se allt*/
 }
+caption{
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: left;
+}
+caption a{
+    border-right: 2px solid black;
+    padding: 5px;
+}
 table, th, td{
     border: 1px solid #ddd;
     border-collapse: collapse;
     padding: 1rem 4rem;
+    text-align: center;
 }
 table{
     margin: auto;
@@ -216,19 +227,38 @@ table{
 th{
     background-color: #b1b1b1;
 }
+tr td+td+td+td+td+td+td{
+    background-color: #646768;
+}
 tr:nth-child(even){
     background-color: #b1b1b1;
-}
-caption{
-    font-size: 2rem;
-    margin: 1rem;
-    text-align: left;
 }
 .textimg{
     vertical-align: baseline;
     height: 2em;
     width: 2em;
 }
+/*Här börjar trespaltslayouten på sidan Om*/
+.local, .local ul, .local li, .historia{
+    margin: 0;
+}
+.local, .historia{
+    float: left;
+}
+.local{
+    width: 20%;
+}
+.local li{
+    display: block;
+    border: 1px solid black;
+    width: 20%;
+}
+.historia{
+    width: 20%;
+}
+/*Här slutar trespaltslayouten på sidan Om*/
+
+/*Här börjar footern för alla sidor*/
 footer{
     clear: both;
     position: relative;
