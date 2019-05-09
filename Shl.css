@@ -239,22 +239,45 @@ tr:nth-child(even){
     width: 2em;
 }
 /*Här börjar trespaltslayouten på sidan Om*/
+.trespalt{
+    position: relative;
+    margin-top: 10rem;
+    white-space: nowrap;
+}
 .local, .local ul, .local li, .historia{
     margin: 0;
 }
-.local, .historia{
-    float: left;
+.local, .historia, iframe{
+    display: inline-block;
 }
 .local{
     width: 20%;
 }
-.local li{
+.inaktiv, .aktiv{
     display: block;
+    background-color: #0c1824;
+    color: #ffffff;
+    width: 17rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+.aktiv{
+    border: 2px solid #ffffff;
+}
+.inaktiv{
     border: 1px solid black;
-    width: 20%;
+}
+.local li:hover{
+    background-color: #0c1824ee;
 }
 .historia{
-    width: 20%;
+    width: 34rem;
+    margin-left: 2.9rem;
+    height: 250px;
+}
+iframe{
+    height: 252px;
+    width: 27rem;
 }
 /*Här slutar trespaltslayouten på sidan Om*/
 
