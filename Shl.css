@@ -177,7 +177,7 @@ article:hover{
 .Lag{  
     background-color: rgba(255, 255, 255, 0.849);
     width: 15rem;
-    height: 30rem;
+    height: 32rem;
     margin: 4rem 4rem;
     margin-right: 0;
     z-index: 3;
@@ -242,22 +242,25 @@ tr:nth-child(even){
 .trespalt{
     position: relative;
     margin-top: 10rem;
-    white-space: nowrap;
+    width: 100%;
 }
 .local, .local ul, .local li, .historia{
     margin: 0;
 }
 .local, .historia, iframe{
-    display: inline-block;
+    float: left;
 }
 .local{
     width: 20%;
+}
+.local ul{
+    width: 100%;
+    padding: 0;
 }
 .inaktiv, .aktiv{
     display: block;
     background-color: #0c1824;
     color: #ffffff;
-    width: 17rem;
     padding: 2rem 0;
     text-align: center;
 }
@@ -271,13 +274,16 @@ tr:nth-child(even){
     background-color: #0c1824ee;
 }
 .historia{
-    width: 34rem;
-    margin-left: 2.9rem;
+    width: 40%;
     height: 250px;
+}
+.historia p{
+    overflow: auto;
+    font-size: 2ex;
 }
 iframe{
     height: 252px;
-    width: 27rem;
+    width: 38%;
 }
 /*Här slutar trespaltslayouten på sidan Om*/
 
@@ -295,7 +301,7 @@ footer{
     width: 100%;
     padding: 1rem 0 0 1rem;
 }
-.footer_container div.container{
+.footer_container div.info{
     width: 30vw;
     float: left;
 }
@@ -308,6 +314,6 @@ footer{
     width: 15vw;
     float: left;
 }
-div.container.middle li{
+div.info.mitten li{
     width: 10vw;
 }

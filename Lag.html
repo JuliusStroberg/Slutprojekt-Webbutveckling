@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <nav>
+        <!--En navigation av de olika huvudsidorna-->
+        <nav> 
             <ul>
                 <li> <a href="SHL.html"> SHL </a> </li>
                 <li> <a href="Lag.html"> Lag </a> </li>
@@ -17,31 +18,35 @@
                 <li> <a href="Om.html"> Om </a> </li>
             </ul>
         </nav>
+
         <img id="Shl" src="shllogga.png" alt="Logga för SHL">
-        
-        <form class="form1">
+        <!--Ett formulär för inlogg på sidan (Endast estetiskt)-->
+        <form class="form1"> 
             <input type="email" name="user" id="user" placeholder="Förnamn:">
             <input type="password" name="password" id="password" placeholder="Efternamn:">
-            <input type="submit">
+            <input type="submit"> <!--Inskick av de inskrivna värderna-->
         </form>
-
+        <!--Ett formulär för sökning på sidan (Endast estetiskt)-->
         <form class="form2">
             <input type="search" name="searchbar" id="searchbar" placeholder="Sök:">
-            <input type="submit">
+            <input type="submit"> <!--Inskick av de inskrivna värderna-->
         </form>
-        
     </header>
-    
+    <!--Aside för animationen av en klubba som skjuter en puck, på vänster sida-->
     <aside class="left">
         <img class="puck" src="puck.png" alt="Hockeypuck">
         <img class="klubba" src="klubba.png" alt="Hockeyklubba">
     </aside>
-
+    <!--Huvudinnehållet för sidan består av 14 artiklar för de olika 14 lagen, information om lagen-->
     <main>
         <h2> Lag i den Svenska Hockey Ligan </h2>
+        <!--Varje artikel består av en lagbild, sedan en description list som 
+            anger de olika sm-guld åren, sedan kommer en bild på arenan och 
+            en bild på lagets logga-->
         <article class="Lag">
             <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
-            <dl>
+            <dl> <!--Gör så att det bilr en rubrik (dt) och de underliggande 
+                informstionen skjuts in ett steg (dd)-->
                 <dt> <b> Grundad </b> </dt>
                 <dd> 1912 </dd>
                 <hr>
@@ -60,305 +65,251 @@
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Djurgården.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1891 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1926, 1950 </dd>
+                <dd> 1954, 1955 </dd>
+                <dd> 1958, 1959 </dd>
+                <dd> 1960, 1961 </dd>
+                <dd> 1962, 1963 </dd>
+                <dd> 1983, 1989 </dd>
+                <dd> 1990 , 1991 </dd>
+                <dd> 2000, 2001 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="Djurgården logga.png" alt="Brynäs logga">
+            <img src="Hovet.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Frölunda.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1944 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1965, 2003</dd>
+                <dd> 2005, 2016 </dd>
+                <dd> 2019 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="Frölunda logga.png" alt="Brynäs logga">
+            <img src="Skandinavium.jpg" alt="Gavlerinken Arena">
         </article>
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Färjestad.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1932 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1981, 1986 </dd>
+                <dd> 1988, 1997 </dd>
+                <dd> 1998, 2002 </dd>
+                <dd> 2006, 2009 </dd>
+                <dd> 2011 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="Färjestad logga.gif" alt="Brynäs logga">
+            <img src="löfbergs.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="HV-71.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1971 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1995, 2004 </dd>
+                <dd> 2008, 2010 </dd>
+                <dd> 2017 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="hv71 logga.png" alt="Brynäs logga">
+            <img src="kinnarps.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Leksand.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1919 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1969, 1973 </dd>
+                <dd> 1974, 1975 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="leksand logga.png" alt="Brynäs logga">
+            <img src="Tegera.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Linköping.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1976 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 0 gånger </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="linköping logga.png" alt="Brynäs logga">
+            <img src="cloetta.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Luleå.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1977 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1996 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="luleå logga.png" alt="Brynäs logga">
+            <img src="coop norrbotten.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Malmö.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1972 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1992, 1994 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="malmö logga.png" alt="Brynäs logga">
+            <img src="Malmö arena.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Oskarshamn.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1970 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 0 gånger </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="oskarshamn logga.png" alt="Brynäs logga">
+            <img src="arena oskarshamn.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Rögle.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1932 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 0 gånger </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="rögle logga.png" alt="Brynäs logga">
+            <img src="lindab.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Skellefteå.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1921 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 1978, 2013 </dd>
+                <dd> 2014 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="skellefteå logga.png" alt="Brynäs logga">
+            <img src="Skellefteå arena.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Växjö.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1997 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 2015, 2018 </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="Växjö logga.png" alt="Brynäs logga">
+            <img src="Vida.jpg" alt="Gavlerinken Arena">
         </article>
 
         <article class="Lag">
-            <img class="Lagbild" src="Brynäs.jpg" alt="Lagbild på Brynäs IF">
+            <img class="Lagbild" src="Örebro.jpg" alt="Lagbild på Brynäs IF">
             <dl>
                 <dt> <b> Grundad </b> </dt>
-                <dd> 1912 </dd>
+                <dd> 1990 </dd>
                 <hr>
                 <dt> <b> Svensak mästare </b> </dt>
-                <dd> 1964, 1966 </dd>
-                <dd> 1967, 1968 </dd>
-                <dd> 1970, 1971 </dd>
-                <dd> 1972, 1976 </dd>
-                <dd> 1977, 1980 </dd>
-                <dd> 1993, 1999 </dd>
-                <dd> 2012 </dd>
+                <dd> 0 gånger </dd>
             </dl>
             <hr>
-            <img src="Brynäs logga.png" alt="Brynäs logga">
-            <img src="BrynäsArena.jpg" alt="Gavlerinken Arena">
+            <img src="örebro hockey.png" alt="Brynäs logga">
+            <img src="behrn.jpg" alt="Gavlerinken Arena">
         </article>
     </main>
 
+    <!--En aside som består av två reklambilder som ligger på höger sida om huvudinnehållet-->
     <aside class="right">
         <img src="annons1.jpg" alt="Annons för HUAWEI med Zara Larsson">
         <img src="annons2.png" alt="Annons för blekning av tänder">
     </aside>
-
+    <!--En footer som inehåller kontaktinformation om SHL och länkar till de 14 Shl lagen -->
     <footer>
-            <div class="footer_container">
-                    <div class="container left">
-                        <strong> Kontakter </strong>
-                        <ul>
-                            <li>Telefon: 070-632 87 44</li>
-                            <li>Mail: shl.ligan@gmail.com</li>
-                        </ul>
-                    </div>
-                    <div class="container middle">
-                        <strong> Adress </strong>
-                        <ul>
-                            <li> Växjö, Sverige</li>
-                            <li> Storgatan, 54 </li>
-                        </ul>
-                    </div>
-                    <div class="container right">
-                        <strong> Lagsidor </strong>
-                        <br>
-                            <li> <a href="#"> Bryynäs </a> </li>
-                            <li> <a href="#"> Djurgården </a> </li>
-                            <li> <a href="#"> Frölunda </a> </li>
-                            <li> <a href="#"> Färjestad </a> </li>
-                            <li> <a href="#"> HV-71 </a> </li>
-                            <li> <a href="#"> Leksand </a> </li>
-                            <li> <a href="#"> Linköping </a> </li>
-                            <li> <a href="#"> Luleå </a> </li>
-                            <li> <a href="#"> Malmö </a> </li>
-                            <li> <a href="#"> Oskarshamn </a> </li>
-                            <li> <a href="#"> Rögle </a> </li>
-                            <li> <a href="#"> Skellefteå </a> </li>
-                            <li> <a href="#"> Växjö </a> </li>
-                            <li> <a href="#"> Örebro </a> </li>
-                    </div>
+        <!--En div för allt innehåll i footern-->
+        <div class="footer_container">
+            <!--Div för det vänstra innehållet in form av en lista-->
+            <div class="info vänster">
+                <strong> Kontakter </strong> <!--Rubrik-->
+                    <ul>
+                        <li>Telefon: 070-632 87 44</li>
+                        <li>Mail: shl.ligan@gmail.com</li>
+                    </ul>
             </div>
+            <!--Div för det mittersta innehållet i form av en lista-->
+            <div class="info mitten">
+                <strong> Adress </strong> <!--Rubrik-->
+                    <ul>
+                        <li> Växjö, Sverige</li>
+                        <li> Storgatan, 54 </li>
+                    </ul>
+            </div>
+            <!--Div för det högra innehållet i form av en lista med länkar-->
+            <div class="info höger">
+                <strong> Lagsidor </strong> <!--Rubrik-->
+                    <br> <!--Hoppar över en rad-->
+                    <!--Listan använder sig inte av t.ex ul eller ol eftersom 
+                        det ska lägga efter vartannat för att ta mindre plats.-->
+                    <li> <a href="#"> Bryynäs </a> </li>
+                    <li> <a href="#"> Djurgården </a> </li>
+                    <li> <a href="#"> Frölunda </a> </li>
+                    <li> <a href="#"> Färjestad </a> </li>
+                    <li> <a href="#"> HV-71 </a> </li>
+                    <li> <a href="#"> Leksand </a> </li>
+                    <li> <a href="#"> Linköping </a> </li>
+                    <li> <a href="#"> Luleå </a> </li>
+                    <li> <a href="#"> Malmö </a> </li>
+                    <li> <a href="#"> Oskarshamn </a> </li>
+                    <li> <a href="#"> Rögle </a> </li>
+                    <li> <a href="#"> Skellefteå </a> </li>
+                    <li> <a href="#"> Växjö </a> </li>
+                    <li> <a href="#"> Örebro </a> </li>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

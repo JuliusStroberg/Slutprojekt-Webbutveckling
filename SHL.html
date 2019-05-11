@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="Shl.css">
+    <link rel="stylesheet" href="Shl.css"> <!--Hämtning av CSS-filen-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Den Svenska Hockey Ligan</title>
 </head>
 <body>
     <header>
-        <nav>
+        <!--En navigation av de olika huvudsidorna-->
+        <nav> 
             <ul>
                 <li> <a href="SHL.html"> SHL </a> </li>
                 <li> <a href="Lag.html"> Lag </a> </li>
@@ -17,26 +18,26 @@
                 <li> <a href="Om.html"> Om </a> </li>
             </ul>
         </nav>
+
         <img id="Shl" src="shllogga.png" alt="Logga för SHL">
-        
-        <form class="form1">
+        <!--Ett formulär för inlogg på sidan (Endast estetiskt)-->
+        <form class="form1"> 
             <input type="email" name="user" id="user" placeholder="Förnamn:">
             <input type="password" name="password" id="password" placeholder="Efternamn:">
-            <input type="submit">
+            <input type="submit"> <!--Inskick av de inskrivna värderna-->
         </form>
-
+        <!--Ett formulär för sökning på sidan (Endast estetiskt)-->
         <form class="form2">
             <input type="search" name="searchbar" id="searchbar" placeholder="Sök:">
-            <input type="submit">
+            <input type="submit"> <!--Inskick av de inskrivna värderna-->
         </form>
-        
     </header>
-
+    <!--Aside för animationen av en klubba som skjuter en puck, på vänster sida-->
     <aside class="left">
         <img class="puck" src="puck.png" alt="Hockeypuck">
         <img class="klubba" src="klubba.png" alt="Hockeyklubba">
     </aside>
-
+    <!--Huvudsidan innehåller 6 st artiklar som har var sin bild och en lorem text-->
 	<main>
         <article>
             <img src="nyhet1.jpg" alt="Frölunda spelare kramar om varandra efter vinst.">
@@ -63,47 +64,53 @@
             <h4>Lorem ipsum</h4> <p> dolor sit amet consectetur adipisicing elit. Dolores explicabo totam illo soluta, perferendis sit odio quos similique, nam reiciendis ex, asperiores nisi atque adipisci saepe laborum dicta illum omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam accusamus deleniti facere quod voluptates culpa, autem rem dolores, cupiditate itaque esse iusto expedita. Nesciunt, reiciendis unde ducimus optio ab nam.</p>
         </article>
     </main>
-    
+    <!--En aside som består av två reklambilder som ligger på höger sida om huvudinnehållet-->
     <aside class="right">
         <img src="annons1.jpg" alt="Annons för HUAWEI med Zara Larsson">
         <img src="annons2.png" alt="Annons för blekning av tänder">
     </aside>
-
+    <!--En footer som inehåller kontaktinformation om SHL och länkar till de 14 Shl lagen -->
     <footer>
-            <div class="footer_container">
-                    <div class="container left">
-                        <strong> Kontakter </strong>
-                        <ul>
-                            <li>Telefon: 070-632 87 44</li>
-                            <li>Mail: shl.ligan@gmail.com</li>
-                        </ul>
-                    </div>
-                    <div class="container middle">
-                        <strong> Adress </strong>
-                        <ul>
-                            <li> Växjö, Sverige</li>
-                            <li> Storgatan, 54 </li>
-                        </ul>
-                    </div>
-                    <div class="container right">
-                        <strong> Lagsidor </strong>
-                        <br>
-                            <li> <a href="#"> Bryynäs </a> </li>
-                            <li> <a href="#"> Djurgården </a> </li>
-                            <li> <a href="#"> Frölunda </a> </li>
-                            <li> <a href="#"> Färjestad </a> </li>
-                            <li> <a href="#"> HV-71 </a> </li>
-                            <li> <a href="#"> Leksand </a> </li>
-                            <li> <a href="#"> Linköping </a> </li>
-                            <li> <a href="#"> Luleå </a> </li>
-                            <li> <a href="#"> Malmö </a> </li>
-                            <li> <a href="#"> Oskarshamn </a> </li>
-                            <li> <a href="#"> Rögle </a> </li>
-                            <li> <a href="#"> Skellefteå </a> </li>
-                            <li> <a href="#"> Växjö </a> </li>
-                            <li> <a href="#"> Örebro </a> </li>
-                    </div>
+        <!--En div för allt innehåll i footern-->
+        <div class="footer_container">
+            <!--Div för det vänstra innehållet in form av en lista-->
+            <div class="info vänster">
+                <strong> Kontakter </strong> <!--Rubrik-->
+                    <ul>
+                        <li>Telefon: 070-632 87 44</li>
+                        <li>Mail: shl.ligan@gmail.com</li>
+                    </ul>
             </div>
+            <!--Div för det mittersta innehållet i form av en lista-->
+            <div class="info mitten">
+                <strong> Adress </strong> <!--Rubrik-->
+                    <ul>
+                        <li> Växjö, Sverige</li>
+                        <li> Storgatan, 54 </li>
+                    </ul>
+            </div>
+            <!--Div för det högra innehållet i form av en lista med länkar-->
+            <div class="info höger">
+                <strong> Lagsidor </strong> <!--Rubrik-->
+                    <br> <!--Hoppar över en rad-->
+                    <!--Listan använder sig inte av t.ex ul eller ol eftersom 
+                        det ska lägga efter vartannat för att ta mindre plats.-->
+                    <li> <a href="#"> Bryynäs </a> </li>
+                    <li> <a href="#"> Djurgården </a> </li>
+                    <li> <a href="#"> Frölunda </a> </li>
+                    <li> <a href="#"> Färjestad </a> </li>
+                    <li> <a href="#"> HV-71 </a> </li>
+                    <li> <a href="#"> Leksand </a> </li>
+                    <li> <a href="#"> Linköping </a> </li>
+                    <li> <a href="#"> Luleå </a> </li>
+                    <li> <a href="#"> Malmö </a> </li>
+                    <li> <a href="#"> Oskarshamn </a> </li>
+                    <li> <a href="#"> Rögle </a> </li>
+                    <li> <a href="#"> Skellefteå </a> </li>
+                    <li> <a href="#"> Växjö </a> </li>
+                    <li> <a href="#"> Örebro </a> </li>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
