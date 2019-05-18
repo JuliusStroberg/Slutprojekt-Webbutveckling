@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Shl.css">
@@ -8,9 +8,9 @@
     <title> Lag </title>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <!--En navigation av de olika huvudsidorna-->
-        <nav> 
+        <nav role="navigation"> 
             <ul>
                 <li> <a href="SHL.html"> SHL </a> </li>
                 <li> <a href="Lag.html"> Lag </a> </li>
@@ -20,16 +20,38 @@
         </nav>
 
         <img id="Shl" src="shllogga.png" alt="Logga för SHL">
-        <!--Ett formulär för inlogg på sidan (Endast estetiskt)-->
-        <form class="form1"> 
-            <input type="email" name="user" id="user" placeholder="Förnamn:">
-            <input type="password" name="password" id="password" placeholder="Efternamn:">
-            <input type="submit"> <!--Inskick av de inskrivna värderna-->
-        </form>
-        <!--Ett formulär för sökning på sidan (Endast estetiskt)-->
-        <form class="form2">
-            <input type="search" name="searchbar" id="searchbar" placeholder="Sök:">
-            <input type="submit"> <!--Inskick av de inskrivna värderna-->
+        <!--Ett formulär för inlogg på sidan bestående av flera olika inputs-->
+        <form action="inlogg.html" method="POST">
+            <fieldset>
+                <Legend> Inloggning </Legend>
+
+                <label for="Användarnamn">Namn:</label>
+                <input type="text" name="namn" id="Användarnamn" required>
+
+                <label for="Lösenord"> Lösenord: </label>
+                <input required name="Lösen" id="Lösenord" type="password">
+
+                <label for="Statusen"> Status: </label>
+                <input name="Status" id="Statusen" type="checkbox">
+
+                <label for="Könet"> Kön: </label>
+                <input checked name="Kön" id="Könet" type="radio">
+
+                <input type="submit" value="Submit">
+
+                <label for="Kommentaren"> Kommentar: </label>
+                <textarea name="Kommentar" id="Kommentaren" cols="30" rows="10"> Skriv kommentar här! </textarea>
+
+                <select name="humör" size="1">
+                    <option selected value="Bra"> Bra </option>
+                </select>
+                
+                <label for="email"> Mail: </label>
+                <input name="mail" id ="email" type="email">
+
+                <label for="nummer"> Färg: </label>
+                <input name="number" id="nummer" type="number">
+            </fieldset>
         </form>
     </header>
     <!--Aside för animationen av en klubba som skjuter en puck, på vänster sida-->
@@ -38,7 +60,7 @@
         <img class="klubba" src="klubba.png" alt="Hockeyklubba">
     </aside>
     <!--Huvudinnehållet för sidan består av 14 artiklar för de olika 14 lagen, information om lagen-->
-    <main>
+    <main role="main">
         <h2> Lag i den Svenska Hockey Ligan </h2>
         <!--Varje artikel består av en lagbild, sedan en description list som 
             anger de olika sm-guld åren, sedan kommer en bild på arenan och 
@@ -269,7 +291,7 @@
         <img src="annons2.png" alt="Annons för blekning av tänder">
     </aside>
     <!--En footer som inehåller kontaktinformation om SHL och länkar till de 14 Shl lagen -->
-    <footer>
+    <footer role="contentinfo">
         <!--En div för allt innehåll i footern-->
         <div class="footer_container">
             <!--Div för det vänstra innehållet in form av en lista-->
@@ -294,20 +316,22 @@
                     <br> <!--Hoppar över en rad-->
                     <!--Listan använder sig inte av t.ex ul eller ol eftersom 
                         det ska lägga efter vartannat för att ta mindre plats.-->
-                    <li> <a href="#"> Bryynäs </a> </li>
-                    <li> <a href="#"> Djurgården </a> </li>
-                    <li> <a href="#"> Frölunda </a> </li>
-                    <li> <a href="#"> Färjestad </a> </li>
-                    <li> <a href="#"> HV-71 </a> </li>
-                    <li> <a href="#"> Leksand </a> </li>
-                    <li> <a href="#"> Linköping </a> </li>
-                    <li> <a href="#"> Luleå </a> </li>
-                    <li> <a href="#"> Malmö </a> </li>
-                    <li> <a href="#"> Oskarshamn </a> </li>
-                    <li> <a href="#"> Rögle </a> </li>
-                    <li> <a href="#"> Skellefteå </a> </li>
-                    <li> <a href="#"> Växjö </a> </li>
-                    <li> <a href="#"> Örebro </a> </li>
+                    <ul>
+                        <li> <a href="https://www.brynas.se/"> Bryynäs </a> </li>
+                        <li> <a href="https://www.difhockey.se/"> Djurgården </a> </li>
+                        <li> <a href="https://www.frolundaindians.com/"> Frölunda </a> </li>
+                        <li> <a href="https://www.farjestadbk.se/"> Färjestad </a> </li>
+                        <li> <a href="https://www.hv71.se/"> HV-71 </a> </li>
+                        <li> <a href="https://www.leksandsif.se/"> Leksand </a> </li>
+                        <li> <a href="https://www.lhc.eu/"> Linköping </a> </li>
+                        <li> <a href="https://www.luleahockey.se/"> Luleå </a> </li>
+                        <li> <a href="https://www.malmoredhawks.com/"> Malmö </a> </li>
+                        <li> <a href="https://www.ikoskarshamn.se/"> Oskarshamn </a> </li>
+                        <li> <a href="https://www.roglebk.se/"> Rögle </a> </li>
+                        <li> <a href="https://www.skellefteaaik.se/"> Skellefteå </a> </li>
+                        <li> <a href="https://www.vaxjolakers.se/"> Växjö </a> </li>
+                        <li> <a href="https://www.orebrohockey.se/"> Örebro </a> </li>
+                    </ul>
             </div>
         </div>
     </footer>

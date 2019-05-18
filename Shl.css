@@ -7,46 +7,50 @@ body {
     font-family: alegreya serif;
     min-height: 100%;
 }
-/* Headern som syns högst upp på sidan får en bakgrundsfärg och responsiv höjd och bredd.*/
+/* Här börjar headern som innehåller en vavigation, en logga och två forum*/
 header {
     background-color: #343a40;
     width: 100vw;
-    height: 10rem;
+    height: 27rem;
 }
 nav{
     position: relative;
     top: 10%;
     float: left;
-    z-index: 2;
+    z-index: 2; /*Gör så att navigationen ligger över shl loggan när den gör sin animation*/
 }
 ul{
-    list-style-type: none;
+    list-style-type: none; /*Ingenting lägger sig framför listans rubriker*/
     width: 30vw;
 }
-li{
-    display: inline-block;
+ul li, div>li{
+    display: inline-block; /*Navigationen lägger sig horisontellt*/
     padding: 10px;
-    border-right: 2px solid black;
+    border-right: 2px solid black; /*Navigationen får ett svart streck till höger om varje rubrik (enbart estetiskt)*/
 }
 a{
-    font-size: 1rem;
-    text-decoration: none;
+    font-size: 4ex;
+    text-decoration: none; /*Strecket under länken tas bort*/
     color: hsl(0, 100%, 100%);
 }
+/*När musen ligger på en av list objekten ändras bakgrundsfärgen över 1 sekund*/
 li:hover{
     background-color: rgba(255, 255, 255, 0.329);
     transition-duration: 1s;
 }
-/* Shl loggan som ligger i headern får sina mått och placeras i mitten av bredden. */
+/* Shl loggan som ligger i headern får sina mått och placeras i mitten av bredden.*/ 
+
 #Shl{
     position: absolute;
-    width: 5rem;
-    height: 5rem;
+    width: 13ex;
+    height: 13ex;
     left: 46.5%;
     top: 1rem;
     animation-name: startanimation;
     animation-duration: 3s;
 }
+/*En animation för loggan skapas, den börjar lägst till vänster, roterar och åker in
+till mitten av skärmen och roterar tillbaka*/
 @keyframes startanimation {
     from {
         left: 0;
@@ -58,22 +62,33 @@ li:hover{
         animation-play-state: paused;
     }
 }
-.form1, .form2{
+form{
     position: relative;
-    top: 60%;
+    top: 10%;
+    height: 80%;
+    width: 30%;
     float: right;
+    margin-right: 2rem;
 }
-input{
-    width: 7vw;
-    min-width: 70px;
+input:required{
+    border: solid red;
 }
+/*Här slutar Headern*/
+
+/*Här börjar de två olika asidesen*/
+
+/*Den vänstra asiden får sin position och storlek.
+Den innehåller animationen med en klubba som 
+skjuter en puck*/
 aside.left { 
     position: relative;
-    background-color: hsl(194, 35%, 68%);
+    background-color: hsla(194, 35%, 68%, 100%);
     width: 15%;
     min-height: 84.3rem;
     float: left;
 }
+/*Pucken ges en storlek och en animation som under 
+fyra sekunder rör sig uppåt skärmen*/
 .puck{
     position: absolute;
     left: 3.5vw;
@@ -85,17 +100,21 @@ aside.left {
     animation-name: puck;
     animation-duration: 4s;
     animation-delay: 1s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
+    animation-timing-function: ease; /*Hastigheten är till ern början hög och mjuknar sedan in*/
+    animation-iteration-count: infinite; /*Amimationen fortsätter för alltid*/
 }
+/*Animationen får sin start och slutposition*/
 @keyframes puck{
     from{
-        top: 47%;
+        top: 48%;
     }
     to{
-        top: 15%;
+        top: 5%;
     }
 }
+/*Klubban ges en storlek och position, den ges också en 
+animation som roterar klubban för att det ska se ut som 
+den skjuter*/
 .klubba{
     position: absolute;
     z-index: 2;
@@ -106,9 +125,11 @@ aside.left {
     top: 25%;
     animation-name: klubba;
     animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; /*Börjar sakta och sedan snabbare och sedan sakta igen */
+    animation-iteration-count: infinite; /*Amimationen fortsätter för alltid*/
 }
+/*Amimationen går från start och roterar för att sedan 
+gå till baka till strtpositionen*/
 @keyframes klubba{
     0%{
 
@@ -120,6 +141,7 @@ aside.left {
 
     }
 }
+/*Den högra asiden får samma storlek men lägger sig på höger sida*/
 aside.right { 
     position: relative;
     background-color: hsl(194, 35%, 68%);
@@ -127,14 +149,22 @@ aside.right {
     height: 84.3rem;
     float: left;
 }
+/*De reklambilder som ligger i den högra asiden får 
+sina positioner och storlek*/
 aside>img{
     width: 60%;
     max-width: 100%;
-    height: 45%; 
     height: auto;
     margin: 6.5% 0 0 20%;
+    border-radius: 5%;
 }
-/* Huvudinnehållet får en bakgrundsbild som placeras i mitten och täcker 70% av bredden. Den sätts på repeat för att täcka hela ytan. */
+/*Här slutar Asidesen*/
+
+/*Här börjar huvudinnehållet som kan bestå av olika saker 
+bestående på vilken sidan man är på*/
+
+/*Main som innehåller huvudinnehållet får sin poition 
+mellan de två asidesen */
 main {
     position: relative;
     display: block;
@@ -142,9 +172,11 @@ main {
     background-color: hsl(317, 0%, 80%);
     width: 70%;
     height: 84.3rem;
-    background-repeat: repeat;
-    overflow-x: auto;
+    overflow-x: auto; /*Blir innehållet för stort för main bildas en scrollbar*/
 }
+/*Här börjar css för shl sidan*/
+/*De 6 artiklarna som finns på sidan får en sorlerk
+och positioneras på jämna mellanrum mellan varandra*/
 article{
     position: relative;
     display: block;
@@ -152,10 +184,12 @@ article{
     margin: 5% 0 0 2.5vw;
     background-color: white;
     height: 16rem;
-    width: 20vw;
+    width: 30vw;
     border: 1px solid rgba(0, 0, 0, 0.534);
     overflow: hidden;
 }
+/*Bilderna i artiklarna placeras högst upp till
+vänster och får sin storlek*/
 article>img{
     float: left;
     width: 35%;
@@ -164,16 +198,30 @@ article>img{
     border: 2px solid black;
 }
 article>p{
+    overflow: auto;
     margin-left: 2%;
-    font-size: 0.8vw;
+    font-size: 4ex;
     max-height: 100%;
+}
+ol{
+    position: relative;
+    left: 5%;
+    font-size: 1vw;
 }
 /*när man håller musen över en artikel förändras bakgrundsfärgen*/
 article:hover{
     background-color: rgba(255, 255, 255, 0.329);
     transition-duration: 1s;
 }
-/*En klass för artiklarna som ligger på Lagsidan*/
+audio{
+    position: relative;
+    margin-top: 2rem;
+}
+/*Här slutar css för artiklarna på shl sidan*/
+
+/*Här börjar css för lagsidan*/
+/*En klass för artiklarna som får storlek
+och mellanrum mellan artiklarna*/
 .Lag{  
     background-color: rgba(255, 255, 255, 0.849);
     width: 15rem;
@@ -182,38 +230,35 @@ article:hover{
     margin-right: 0;
     z-index: 3;
 }
-/*Klass för lagbilder*/
+/*Klass för lagbilderan som ligger i artiklarna*/
 .Lagbild{
     width: 100%;
     height: 10rem;
     margin: 0;
-    border-bottom: 20px solid black;
+    border-bottom: 20px solid black; /*Får en svart rektangle under bilden*/
 }
-/*Beskrivningslistan för varje lag*/
+/*Bilderna som ligger efter listan får en storlek*/
 dl~img{
     height: 4rem;
     margin: 0 1rem;
     border: 0;
 }
-@media screen and (max-width: 1000px)
-{
-    article{
-        width: 25vw;
-        height: 20vw;
-    }
-}
+/*Här börjar innehållet för statistiksidan*/
 section{
     overflow-x: auto; /*Blir tabellen för stor för att få plats på sidan kan man skrolla horisontellt för att kuna se allt*/
 }
+/*En rubrik över tabellen*/
 caption{
     font-size: 2rem;
     margin: 1rem;
     text-align: left;
 }
+/*Länkarna som ligger under rubriken*/
 caption a{
-    border-right: 2px solid black;
+    border-right: 2px solid rgb(0,0,0);
     padding: 5px;
 }
+/*texten i tabellen läggs i mitten och tabellen får rutor*/
 table, th, td{
     border: 1px solid #ddd;
     border-collapse: collapse;
@@ -221,24 +266,26 @@ table, th, td{
     text-align: center;
 }
 table{
-    margin: auto;
+    margin: auto; /*Tabellen lägger sig i mitten av skärmen*/
     margin-top: 3rem;
 }
 th{
     background-color: #b1b1b1;
 }
-tr td+td+td+td+td+td+td{
+/*Den tredje kolumnen får en annan bakgrundsfärg*/
+td:last-child{
     background-color: #646768;
 }
+/*Varannan rad får en annan färg*/
 tr:nth-child(even){
     background-color: #b1b1b1;
 }
 .textimg{
-    vertical-align: baseline;
+    vertical-align: baseline; /*Bilderna i tabellen lägger sig bredvid textens baseline*/
     height: 2em;
     width: 2em;
 }
-/*Här börjar trespaltslayouten på sidan Om*/
+/*Här börjar css för trespaltslayouten på sidan Om*/
 .trespalt{
     position: relative;
     margin-top: 10rem;
@@ -247,6 +294,7 @@ tr:nth-child(even){
 .local, .local ul, .local li, .historia{
     margin: 0;
 }
+/*De tre olika objekten i trespaltslayouten lägger sig åt vänster*/
 .local, .historia, iframe{
     float: left;
 }
@@ -257,6 +305,10 @@ tr:nth-child(even){
     width: 100%;
     padding: 0;
 }
+.local a{
+    font-size: 1rem;
+}
+/*Två klasser till li taggarna som anger om den är aktiv eller inaktiv*/
 .inaktiv, .aktiv{
     display: block;
     background-color: #0c1824;
@@ -264,12 +316,16 @@ tr:nth-child(even){
     padding: 2rem 0;
     text-align: center;
 }
+/*Har man tryckt på en av li taggarna och bytt sida visas den som 
+aktiv och har därmed en annan färg på bordern*/
 .aktiv{
     border: 2px solid #ffffff;
 }
+/*De li taggar som inte är aktiva får en annan färg*/
 .inaktiv{
     border: 1px solid black;
 }
+/*När musen är över li taggen byter den färg*/
 .local li:hover{
     background-color: #0c1824ee;
 }
@@ -277,6 +333,7 @@ tr:nth-child(even){
     width: 40%;
     height: 250px;
 }
+/*Tar texten upp mer än som får plats skapas en scrollbar*/
 .historia p{
     overflow: auto;
     font-size: 2ex;
@@ -288,8 +345,12 @@ iframe{
 /*Här slutar trespaltslayouten på sidan Om*/
 
 /*Här börjar footern för alla sidor*/
+/*Footern innehåller tre olika boxar som har var sin listan som innehåller
+information. De lägger sig åt vänster och storleken beror på skärmens bredd.*/
+
+/*Footern får sin storlek, färg och läägger sig på booten av skärmen*/
 footer{
-    clear: both;
+    clear: both; /*Inga element med float är tillåtna på sidorna om footern*/
     position: relative;
     background-color: #343a40;
     width: 100vw;
@@ -297,10 +358,15 @@ footer{
     margin-top: -30rem;
     color: #ffffff;
 }
+footer a{
+    font-size: 1rem;
+}
+/*Hela footer informationen tar upp hela bredden*/
 .footer_container{
     width: 100%;
     padding: 1rem 0 0 1rem;
 }
+/*Bredden för alla tre behållarna av listor får sin bredd*/
 .footer_container div.info{
     width: 30vw;
     float: left;
@@ -317,3 +383,95 @@ footer{
 div.info.mitten li{
     width: 10vw;
 }
+div.info.höger li{
+    height: 0.5rem;
+}
+/*Här slutar footern för alla sidor*/
+
+/*Här börjar media queries för att göra 
+sidan responsiv för mobiler och läsplattor*/
+
+/*Det blir endast en artikel per rad*/
+@media screen and (max-width: 1700px)
+{
+    article{
+        width: 50vw;
+        margin-left: 10vw;
+    }
+}
+@media screen and (max-width: 1000px)
+{
+    .klubba{
+        height: 10rem;
+        width: 3rem;
+        left: 2vw;
+        top: 10%;
+    }
+    .puck{
+        height: 2rem;
+        width: 2rem;
+        left: 0.5vw;
+        top: 19.5%;
+    }
+    @keyframes puck{
+        from{
+            top: 19.5%;
+        }
+        to{
+            top: 5%;
+        }
+    }
+}
+/*Header och footer justeras för att få plats med innehållet*/
+@media screen and (max-width: 850px)
+{
+    header li{
+        display: block;
+    }
+    article p, article li{
+        font-size: 1rem;
+    }
+}
+/*Trespaltslayouten ändras om så att de ligger på varandra 
+istället, för att man lättare ska kunna se all information*/
+@media screen and (max-width: 750px)
+{
+    .local, .historia, iframe{
+        float: none;
+        width: 80%;
+        margin: auto;
+    }
+    iframe{
+        width: 100%;
+    }
+    form{
+        float: none;
+        top: 10%;
+        width: 65%;
+        left: 0;
+    }
+    header{
+        height: 43rem;
+    }
+}
+/*Artikeln tar upp hela bredden på main*/
+@media screen and (max-width: 580px)
+{
+    footer{
+        height: 30rem;
+        margin-top: -30rem;
+    }
+    article{
+        width: 70vw;
+        margin-left: 0vw;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    footer{
+        height: 40rem;
+        margin-top: -40rem;
+    }
+}
+
