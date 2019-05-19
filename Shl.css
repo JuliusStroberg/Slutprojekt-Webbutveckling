@@ -4,7 +4,7 @@ html, body{
 }
 body {
     margin: 0;
-    font-family: alegreya serif;
+    font-family: serif;
     min-height: 100%;
 }
 /* Här börjar headern som innehåller en vavigation, en logga och två forum*/
@@ -131,14 +131,8 @@ den skjuter*/
 /*Amimationen går från start och roterar för att sedan 
 gå till baka till strtpositionen*/
 @keyframes klubba{
-    0%{
-
-    }
     50%{
         transform: rotate3d(10, 0, 0, 45deg);
-    }
-    100%{
-
     }
 }
 /*Den högra asiden får samma storlek men lägger sig på höger sida*/
@@ -339,7 +333,7 @@ aktiv och har därmed en annan färg på bordern*/
     font-size: 2ex;
 }
 iframe{
-    height: 252px;
+    height: 248px;
     width: 38%;
 }
 /*Här slutar trespaltslayouten på sidan Om*/
@@ -385,6 +379,12 @@ div.info.mitten li{
 }
 div.info.höger li{
     height: 0.5rem;
+}
+/*En bild som visar att css:en är valiederad*/
+figure{
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 /*Här slutar footern för alla sidor*/
 
